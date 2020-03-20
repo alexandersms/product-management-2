@@ -1,13 +1,13 @@
 <template>
   <div class="row mt-5">
-    <div class="col-4">
+    <div class="col-4 mt-5">
       <img
         class="w-100"
         src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png"
         alt="Vans"
       />
     </div>
-    <div class="col-8">
+    <div class="col-8 mt-5">
       <h1>Product title</h1>
       <h3>23&euro;</h3>
 

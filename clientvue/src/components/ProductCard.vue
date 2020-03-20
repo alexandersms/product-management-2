@@ -1,6 +1,6 @@
 <template>
   <div class="col-12 col-sm-8 col-md-6 col-lg-4">
-    <div class="card mt-2">
+    <div class="card mt-4">
       <img
         class="card-img"
         src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png"

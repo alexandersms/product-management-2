@@ -1,5 +1,8 @@
 <template>
-  <div class="row">
+  <div class="row mt-5">
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
     <ProductCard />
     <ProductCard />
     <ProductCard />

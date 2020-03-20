@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand navbar-dark bg-success">
+    <nav class="navbar navbar-expand navbar-dark fixed-top bg-secondary">
       <div class="container">
         <div class="nav navbar-nav">
           <router-link to="/" class="nav-item nav-link active"
@@ -12,7 +12,7 @@
         <div>
           <div class="dropdown open">
             <button
-              class="btn btn-secondary dropdown-toggle"
+              class="btn btn-primary dropdown-toggle"
               type="button"
               id="triggerId"
               data-toggle="dropdown"
