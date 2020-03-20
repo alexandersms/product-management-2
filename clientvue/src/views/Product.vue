@@ -1,25 +1,18 @@
 <template>
-  <div class="row mt-5">
+  <div class="row mt-5" v-if="product">
     <div class="col-4 mt-5">
-      <img
-        class="w-100"
-        src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png"
-        alt="Vans"
-      />
+      <img class="w-100" :src="product.image" :alt="product.name" />
     </div>
     <div class="col-8 mt-5">
-      <h1>Product title</h1>
-      <h3>23&euro;</h3>
+      <h2>{{ product.name }}</h2>
+      <h3>{{ product.price }}&euro;</h3>
 
       <input type="text" class="text-center col-1 mr-2 p-1" />
       <button class="btn btn-danger">
         <i class="fas fa-shopping-cart"></i> Add to Cart
       </button>
       <p class="mt-4">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis,
-        alias? Sequi repudiandae laboriosam quas adipisci ab delectus, quod
-        provident cumque, sint nostrum eius fuga, nobis asperiores eveniet dicta
-        eos consectetur.
+        {{ product.description }}
       </p>
     </div>
   </div>
@@ -27,8 +20,14 @@
 
 <script>
 export default {
-  props: ["id"]
+  props: ["id"],
+  mounted() {
+    this.$store.dispatch("getProduct", this.id);
+  },
+  computed: {
+    product() {
+      return this.$store.state.product;
+    }
+  }
 };
 </script>
-
-<style scoped></style>

@@ -1,14 +1,10 @@
 <template>
   <div class="row mt-5">
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
+    <ProductCard
+      v-for="product in products"
+      :key="product._id"
+      :product="product"
+    />
   </div>
 </template>
 
@@ -18,6 +14,14 @@ export default {
   name: "ProductList",
   components: {
     ProductCard
+  },
+  mounted() {
+    this.$store.dispatch("getProducts");
+  },
+  computed: {
+    products() {
+      return this.$store.state.products;
+    }
   }
 };
 </script>
